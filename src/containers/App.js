@@ -1,29 +1,30 @@
-import React from 'react';
-import './App.css';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
-import Signin from './Signin';
-import Profile from './Profile';
+import React from "react";
+import Login from "../components/login/Login";
+import { Home } from "../components/Home";
+
+import { BrowserRouter as Router, Switch, Redirect } from "react-router-dom";
+import PrivateRoute from "../Utils/PrivateRoute";
+import PublicRoute from "../Utils/PublicRoute";
 
 function App() {
-  const token = localStorage.getItem('accessToken');
-
-  if(!token) {
-    return <Signin />
-  }
-
   return (
-    <div className="wrapper">
-      <BrowserRouter>
-        <Switch>
-          <Route path="/profile">
-            <Profile />
-          </Route>
-          <Route path="/">
-            <Profile />
-          </Route>
-          <Redirect to="/" />
-        </Switch>
-      </BrowserRouter>
+    <div>
+      <Router>
+        {/* <div className="header">
+          <Link to="/">login</Link>
+          <Link to="/dashboard">
+            Dashboard
+          </Link>
+        </div> */}
+
+        <div className="content">
+          <Switch>
+            <PublicRoute exact path="/" component={Login} />
+            <PrivateRoute exact path="/home" component={Home} />
+            <Redirect to="/" />
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }
