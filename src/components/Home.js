@@ -1,7 +1,7 @@
 import React from "react";
 //import { useHistory  } from "react-router-dom";
 import { getUser, removeUserSession } from "../Utils/Common";
-import { Navbar,Container,Col,Row} from "react-bootstrap";
+import { Navbar,Container,Col,Row,Nav,NavDropdown, Button} from "react-bootstrap";
 import { BrowserRouter as Router, Switch, Redirect,Route } from "react-router-dom";
 import {Link} from "react-router-dom";
 import "./Home.css";
@@ -9,10 +9,16 @@ import Dashboard from "./Dashboard/Dashboard";
 import Sport from "./Sport/Sport";
 import Tournament from "./Tournament/Tournament";
 import Category from "./Category/Category";
+import { Card } from "react-bootstrap";
+import TableChartIcon from '@material-ui/icons/TableChart';
+import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
+import SportsVolleyballIcon from '@material-ui/icons/SportsVolleyball';
+import FormatIndentDecreaseIcon from '@material-ui/icons/FormatIndentDecrease';
 export const Home = (props) => {
 
+     
+  const user = JSON.parse(localStorage.getItem('user'));
 
-  const user = getUser();
   //let history = useHistory();
   const handleLogout = () => {
     removeUserSession();
@@ -22,32 +28,40 @@ export const Home = (props) => {
   return (
     <>
     <Router>
-    <div className="container-fluid border">
-<Navbar>
-<Container fluid>
-    {/* <Navbar.Brand href="#home">Navbar with text</Navbar.Brand> */}
-    <Navbar.Toggle />
-    <Navbar.Collapse className="justify-content-end">
-      <Navbar.Text>
-       Welcome {user.fname} {user.lname} <input type="button" value="Logout" onClick={handleLogout} />
-      </Navbar.Text>
-    </Navbar.Collapse>
-  </Container>
+    <div className="b-border">
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+  
+  <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+    <Nav className="me-auto">
+      
+     
+    </Nav>
+    <Nav>
+      <Nav.Link href="#deets">{user.fname} {user.lname}</Nav.Link>
+      <Nav.Link eventKey={2} href="#memes">
+        <Button onClick={handleLogout} className="btn-sm">Logout</Button>
+      </Nav.Link>
+    </Nav>
+  </Navbar.Collapse>
+ 
 </Navbar>
 
 </div>
-<Container >
+<div >
+  <div className="container-fluid">
   <Row>
-    <Col sm={4}>
-    <Link to="/dashboard">dashboard</Link><br/>
-    <Link to="/sport">Sport</Link><br/>
-    <Link to="/tournament">Tournament</Link><br/>
-    <Link to="/category">Category</Link><br/>
-    
-    
+    <Col sm={12} md={2} >
+      <ul>
+  <li><Link class="active" to="/dashboard"><TableChartIcon></TableChartIcon> dashboard</Link></li>
+  <li><Link to="/sport"><SportsEsportsIcon></SportsEsportsIcon> Sport</Link></li>
+  <li><Link to="/tournament"><SportsVolleyballIcon></SportsVolleyballIcon>Tournament</Link></li>
+  <li><Link to="/category"><FormatIndentDecreaseIcon></FormatIndentDecreaseIcon>Category</Link></li>
+</ul> 
     </Col>
-    <Col xs={8}>
-    <div className="content">
+    <Col sm={12} md={10} >
+    <div >
           <Switch>
            <Route exact path="/dashboard" component={Dashboard} />
            <Route exact path="/sport" component={Sport} />
@@ -60,9 +74,13 @@ export const Home = (props) => {
     </Col>
 
   </Row>
+  </div>
+
  
-</Container>
-        
+</div>
+<div className="text-center f-box">
+  Footer text 2021
+</div>
       </Router>
     
     </>
