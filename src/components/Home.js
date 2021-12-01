@@ -19,6 +19,8 @@ import VideogameAssetIcon from '@material-ui/icons/VideogameAsset';
 import { useTheme } from '@material-ui/core'
 import { useMediaQuery } from '@material-ui/core';
 import DehazeIcon from '@material-ui/icons/Dehaze';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import Tooltip from '@material-ui/core/Tooltip';
 
 export const Home = (props) => {
   function LeftNav(){
@@ -47,7 +49,7 @@ export const Home = (props) => {
 
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          <Offcanvas.Title>Admin Dashboard</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
         <ul>
@@ -84,7 +86,9 @@ export const Home = (props) => {
     <Navbar.Toggle />
     <Navbar.Collapse className="justify-content-end">
       <Navbar.Text>
-      {user.fname} {user.lname}:  <Button onClick={handleLogout} className="btn-sm">Logout</Button>
+      {user.fname} {user.lname}: &nbsp;
+      <Button onClick={handleLogout} className="btn-sm btn-dark">< ExitToAppIcon></ExitToAppIcon> Logout</Button>
+ 
       </Navbar.Text>
     </Navbar.Collapse>
  
