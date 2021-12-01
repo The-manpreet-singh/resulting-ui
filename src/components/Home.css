@@ -3,13 +3,17 @@
     margin: 0;
     padding: 0;
 }
+
 ul {
-    height: 88.7vh;
+    height:100vh;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: rgb(238, 238, 238);
     margin-bottom:-25px
+  }
+  .Nav-res{
+    padding-left: 4px;
+    padding-right: 4px;
   }
   
   li a {
@@ -30,7 +34,7 @@ ul {
   }
   
   .b-border{
-      border-bottom: 2px solid #444;
+      border-bottom: 1px solid rgba(209, 209, 209, 0.616);
   }
   .container-fluid{
     padding-left: 0;
@@ -39,4 +43,22 @@ ul {
   .f-box{
  background-color: rgb(238, 238, 238);
  padding: 12px;
+  }
+  @media screen and (max-width: 600px) {
+    .container-fluid{
+      padding-right: 0;
+      
+    }
+    ul {
+      height:30vh;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      margin-bottom:-25px
+    }
+  }
+  .f-box{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }

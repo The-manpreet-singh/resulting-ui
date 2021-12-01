@@ -14,6 +14,7 @@ import TableChartIcon from '@material-ui/icons/TableChart';
 import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
 import SportsVolleyballIcon from '@material-ui/icons/SportsVolleyball';
 import FormatIndentDecreaseIcon from '@material-ui/icons/FormatIndentDecrease';
+import VideogameAssetIcon from '@material-ui/icons/VideogameAsset';
 export const Home = (props) => {
 
      
@@ -29,22 +30,15 @@ export const Home = (props) => {
     <>
     <Router>
     <div className="b-border">
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-  
-  <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-  <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="me-auto">
-      
-     
-    </Nav>
-    <Nav>
-      <Nav.Link href="#deets">{user.fname} {user.lname}</Nav.Link>
-      <Nav.Link eventKey={2} href="#memes">
-        <Button onClick={handleLogout} className="btn-sm">Logout</Button>
-      </Nav.Link>
-    </Nav>
-  </Navbar.Collapse>
+    <Navbar className="Nav-res">
+ 
+    <Navbar.Brand href="#home"><VideogameAssetIcon/> Admin Dashboard</Navbar.Brand>
+    <Navbar.Toggle />
+    <Navbar.Collapse className="justify-content-end">
+      <Navbar.Text>
+      {user.fname} {user.lname}:  <Button onClick={handleLogout} className="btn-sm">Logout</Button>
+      </Navbar.Text>
+    </Navbar.Collapse>
  
 </Navbar>
 
@@ -52,7 +46,7 @@ export const Home = (props) => {
 <div >
   <div className="container-fluid">
   <Row>
-    <Col sm={12} md={2} >
+    <Col sm={12} md={2}  >
       <ul>
   <li><Link class="active" to="/dashboard"><TableChartIcon></TableChartIcon> dashboard</Link></li>
   <li><Link to="/sport"><SportsEsportsIcon></SportsEsportsIcon> Sport</Link></li>
@@ -60,7 +54,7 @@ export const Home = (props) => {
   <li><Link to="/category"><FormatIndentDecreaseIcon></FormatIndentDecreaseIcon>Category</Link></li>
 </ul> 
     </Col>
-    <Col sm={12} md={10} >
+    <Col sm={12} md={10} id="right-box" >
     <div >
           <Switch>
            <Route exact path="/dashboard" component={Dashboard} />
@@ -79,7 +73,7 @@ export const Home = (props) => {
  
 </div>
 <div className="text-center f-box">
-  Footer text 2021
+ &copy; copy2021
 </div>
       </Router>
     
