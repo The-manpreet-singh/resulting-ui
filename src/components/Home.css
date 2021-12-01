@@ -5,8 +5,9 @@
 }
 
 ul {
-    height:100vh;
+
     list-style-type: none;
+    height: 100vh;
     margin: 0;
     padding: 0;
     margin-bottom:-25px
@@ -38,6 +39,7 @@ ul {
   }
   .container-fluid{
     padding-left: 0;
+    height: 100vh;
     
   }
   .f-box{
@@ -49,6 +51,8 @@ ul {
       padding-right: 0;
       
     }
+    
+    
     ul {
       height:30vh;
       list-style-type: none;
@@ -61,4 +65,14 @@ ul {
     position: fixed;
     bottom: 0;
     width: 100%;
+  }
+  .row{
+    margin-left: 0px !important;
+    margin-right: 0px!important;
+    padding: 0 !important;
+  }
+  .col-md-2{
+    background-color: rgb(248, 248, 248);
+    padding: 0;
+   
   }
