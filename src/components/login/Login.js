@@ -44,13 +44,13 @@ export const Login = (props) => {
 
   return (
     <div className="Login">
-      <Container>
+      {/* <Container>
 <div className="info">
     <h1>Login Form</h1><span>Made with <FavoriteOutlinedIcon/> By <a href="#">EHRENFELD TECHNOLOGIES PRIVATE LIMITED</a></span>
 </div>
-</Container>
+</Container> */}
 <div className="form">
-<div class="thumbnail"><AccountCircleIcon style={{fontSize:100,color:"white"}} /> </div>
+<div className="thumbnail"><AccountCircleIcon style={{fontSize:100,color:"white"}} /> </div>
   <Form>
   <Form.Group className="mb-3" controlId="formBasicEmail">
   
@@ -78,7 +78,7 @@ export const Login = (props) => {
    disabled={loading}
    onClick={handleLogin}
   >
-    Submit
+    Login
   </Button>
 </Form>
 </div>

@@ -1,8 +1,15 @@
+.Login{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
 
+}
 .form {
   background: #FFFFFF;
   max-width: 500px;
-  margin-top: 40px;
+  margin-top: 180px !important;
   margin: 0 auto 200px;
   padding: 30px;
   border-top-left-radius: 3px;
@@ -11,13 +18,12 @@
   border-bottom-right-radius: 3px;
   text-align: center;
 }
-.MuiSvgIcon-root{
-    font-size: 50px;
-}
+
 .Log-btn{
   background: #575757 !important;
 
 }
+
 .form .thumbnail {
   background: #575757;
   width: 150px;

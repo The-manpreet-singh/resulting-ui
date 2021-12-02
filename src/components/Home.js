@@ -27,7 +27,7 @@ export const Home = (props) => {
     return(
 <>
 <ul>
-  <li><Link class="active" to="/dashboard"><TableChartIcon></TableChartIcon> dashboard</Link></li>
+  <li><Link className="active" to="/dashboard"><TableChartIcon></TableChartIcon> dashboard</Link></li>
   <li><Link to="/sport"><SportsEsportsIcon></SportsEsportsIcon> Sport</Link></li>
   <li><Link to="/tournament"><SportsVolleyballIcon></SportsVolleyballIcon>Tournament</Link></li>
   <li><Link to="/category"><FormatIndentDecreaseIcon></FormatIndentDecreaseIcon>Category</Link></li>
@@ -45,7 +45,7 @@ export const Home = (props) => {
     return(
       <>
        
-      <DehazeIcon style={{fontSize:"50px"}} onClick={handleShow}></DehazeIcon>
+      <DehazeIcon style={{fontSize:"40px"}} onClick={handleShow}></DehazeIcon>
 
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
@@ -53,7 +53,7 @@ export const Home = (props) => {
         </Offcanvas.Header>
         <Offcanvas.Body>
         <ul>
-       <li onClick={handleClose}><Link class="active" to="/dashboard"><TableChartIcon></TableChartIcon> dashboard</Link></li>
+       <li onClick={handleClose}><Link className="active" to="/dashboard"><TableChartIcon></TableChartIcon> dashboard</Link></li>
        <li  onClick={handleClose}><Link to="/sport"><SportsEsportsIcon></SportsEsportsIcon> Sport</Link></li>
         <li  onClick={handleClose}><Link to="/tournament"><SportsVolleyballIcon></SportsVolleyballIcon>Tournament</Link></li>
        <li  onClick={handleClose} ><Link to="/category"><FormatIndentDecreaseIcon></FormatIndentDecreaseIcon>Category</Link></li>
