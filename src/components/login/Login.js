@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button,Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import FavoriteOutlinedIcon from '@material-ui/icons/FavoriteOutlined';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import "./Login.css";
 import axios from "axios";
 import { setUserSession } from "../../Utils/Common";
@@ -42,44 +44,44 @@ export const Login = (props) => {
 
   return (
     <div className="Login">
-      <Form>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control
-            type="email"
+      <Container>
+<div className="info">
+    <h1>Login Form</h1><span>Made with <FavoriteOutlinedIcon/> By <a href="#">EHRENFELD TECHNOLOGIES PRIVATE LIMITED</a></span>
+</div>
+</Container>
+<div className="form">
+<div class="thumbnail"><AccountCircleIcon style={{fontSize:100,color:"white"}} /> </div>
+  <Form>
+  <Form.Group className="mb-3" controlId="formBasicEmail">
+  
+    <Form.Control  type="email"
             value={username}
             placeholder="Enter email"
-            onChange={(e) => setUsername(e.target.value)}
-          />
-          {/* <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text> */}
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            type="password"
+            onChange={(e) => setUsername(e.target.value)} />
+  </Form.Group>
+
+  <Form.Group className="mb-3" controlId="formBasicPassword">
+
+    <Form.Control  type="password"
             value={password}
             placeholder="Password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </Form.Group>
-        {error && <Form.Text className="text-message">{error}</Form.Text>}{" "}
+            onChange={(e) => setPassword(e.target.value)} />
+  </Form.Group>
+  {error && <Form.Text className="text-message">{error}</Form.Text>}{" "}
         <br />
-        {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group> */}
-        <Button
-          role="button"
-          variant="primary"
-          type="submit"
-          value={loading ? "loading..." : "login"}
-          disabled={loading}
-          onClick={handleLogin}
-        >
-          Submit
-        </Button>
-      </Form>
+  
+  <Button className="Log-btn" 
+   role="button"
+   variant="primary"
+   type="submit"
+   value={loading ? "loading..." : "login"}
+   disabled={loading}
+   onClick={handleLogin}
+  >
+    Submit
+  </Button>
+</Form>
+</div>
     </div>
   );
 };
