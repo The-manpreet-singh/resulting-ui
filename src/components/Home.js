@@ -68,7 +68,7 @@ export const Home = (props) => {
   const chk = useMediaQuery(theme.breakpoints.down("md"))
 
      
-  const user = JSON.parse(localStorage.getItem('user'));
+  const user = getUser();
 
   //let history = useHistory();
   const handleLogout = () => {

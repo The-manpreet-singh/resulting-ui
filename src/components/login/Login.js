@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button,Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Typography } from "@material-ui/core";
 import FavoriteOutlinedIcon from '@material-ui/icons/FavoriteOutlined';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import "./Login.css";
@@ -13,6 +14,8 @@ export const Login = (props) => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [userER, setUserEr] = useState();
+  const [passER, setPassEr] = useState();
 
   //let history = useHistory();
 
@@ -40,6 +43,25 @@ export const Login = (props) => {
         }
         console.log("error>>>", error);
       });
+      if (username==="") {
+
+        setUserEr("*Please enter your email-ID.")
+      }
+    else{
+        var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+        if (!pattern.test(username)) {
+    
+         
+          setUserEr("*Please enter valid email-ID.")
+        }
+        if(pattern.test(username)){
+          setUserEr("")
+        }
+    }
+    if (password==="") {
+
+      setPassEr("*Please enter your Password.")
+    }
   };
 
   return (
@@ -59,6 +81,9 @@ export const Login = (props) => {
             placeholder="Enter email"
             onChange={(e) => setUsername(e.target.value)} />
   </Form.Group>
+  <Typography component="p" color="secondary">
+            {userER}
+  </Typography>
 
   <Form.Group className="mb-3" controlId="formBasicPassword">
 
@@ -67,6 +92,9 @@ export const Login = (props) => {
             placeholder="Password"
             onChange={(e) => setPassword(e.target.value)} />
   </Form.Group>
+  <Typography component="p" color="secondary">
+            {passER}
+  </Typography>
   {error && <Form.Text className="text-message">{error}</Form.Text>}{" "}
         <br />
   
