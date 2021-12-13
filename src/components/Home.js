@@ -1,4 +1,5 @@
 import React from "react";
+import admin_logo from '../static/img/admin.png'
 //import { useHistory  } from "react-router-dom";
 import { getUser, removeUserSession } from "../Utils/Common";
 import { Navbar, Col, Row, Button } from "react-bootstrap";
@@ -35,7 +36,8 @@ export const Home = (props) => {
       <div className="b-border">
         <Navbar className="Nav-res">
           <Navbar.Brand >
-            {chk === true ? <SideDrawer /> : "Admin Dashboard"}
+            
+            {chk === true ? <SideDrawer /> :<><img src={admin_logo} alt="admin" height={30}/> Admin Dashboard</> }
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">

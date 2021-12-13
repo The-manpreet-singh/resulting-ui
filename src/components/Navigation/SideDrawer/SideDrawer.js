@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-
-
 import DehazeIcon from "@material-ui/icons/Dehaze";
 import { Offcanvas } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -8,9 +6,9 @@ import FormatIndentDecreaseIcon from "@material-ui/icons/FormatIndentDecrease";
 import TableChartIcon from "@material-ui/icons/TableChart";
 import SportsEsportsIcon from "@material-ui/icons/SportsEsports";
 import SportsVolleyballIcon from "@material-ui/icons/SportsVolleyball";
-import AutorenewIcon from '@material-ui/icons/Autorenew';
-import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+// import AutorenewIcon from '@material-ui/icons/Autorenew';
+// import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
+// import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 
 export const SideDrawer = () => {
@@ -54,12 +52,12 @@ export const SideDrawer = () => {
             </li>
             {/* <li><Link to=""><QueueIcon></QueueIcon>Add Option</Link></li>
   <li><Link to=""><SettingsIcon></SettingsIcon>Setting</Link></li> */}
-  <hr className="div_line" />
+  {/* <hr className="div_line" />
   <li><Link to="">admin user</Link></li>
   <hr className="div_line" />
   <li><Link to=""><AssignmentIndIcon></AssignmentIndIcon>User info</Link></li>
   <li><Link to=""><AutorenewIcon></AutorenewIcon>Profile Update</Link></li>
-  <li><Link to="">< ExitToAppIcon></ExitToAppIcon>Logout</Link></li>
+  <li><Link to="">< ExitToAppIcon></ExitToAppIcon>Logout</Link></li> */}
           </ul>
         </Offcanvas.Body>
       </Offcanvas>
