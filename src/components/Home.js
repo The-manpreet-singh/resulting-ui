@@ -1,4 +1,7 @@
 import React from "react";
+import user_logo from '../static/img/user_icon.png'
+import admin_logo from '../static/img/admin.png'
+
 //import { useHistory  } from "react-router-dom";
 import { getUser, removeUserSession } from "../Utils/Common";
 import { useState } from "react";
@@ -15,6 +18,8 @@ import TableChartIcon from '@material-ui/icons/TableChart';
 import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
 import SportsVolleyballIcon from '@material-ui/icons/SportsVolleyball';
 import FormatIndentDecreaseIcon from '@material-ui/icons/FormatIndentDecrease';
+import AutorenewIcon from '@material-ui/icons/Autorenew';
+import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 import SettingsIcon from '@material-ui/icons/Settings';
 import QueueIcon from '@material-ui/icons/Queue';
 import VideogameAssetIcon from '@material-ui/icons/VideogameAsset';
@@ -36,6 +41,11 @@ export const Home = (props) => {
   <li><Link to=""><QueueIcon></QueueIcon>Add Option</Link></li>
   <li><Link to=""><SettingsIcon></SettingsIcon>Setting</Link></li>
   <hr className="div_line" />
+  <li><Link to=""><img src={user.avatar} height={35}/> &nbsp;{user.fname} {user.lname}</Link></li>
+  <hr className="div_line" />
+  <li><Link to=""><AssignmentIndIcon></AssignmentIndIcon>User info</Link></li>
+  <li><Link to=""><AutorenewIcon></AutorenewIcon>Profile Update</Link></li>
+  <li><Link to="">< ExitToAppIcon></ExitToAppIcon>Logout</Link></li>
 </ul> 
 
 </>
@@ -90,11 +100,12 @@ export const Home = (props) => {
     <div className="b-border">
     <Navbar className="Nav-res">
  
-    <Navbar.Brand  className="admin-text">  {chk==true?<Show/>:"Admin Dashboard"} </Navbar.Brand>
+    <Navbar.Brand  className="admin-text"><img src={admin_logo} height={30}/>  {chk==true?<Show/>:"Admin Dashboard"} </Navbar.Brand>
     <Navbar.Toggle />
     <Navbar.Collapse className="justify-content-end">
+      
       <Navbar.Text>
-      {user.fname} {user.lname}: &nbsp;
+      <img src={user.avatar} height={32}/> &nbsp; {user.fname} {user.lname}: &nbsp;
       <Button onClick={handleLogout} className="btn-sm btn-dark">< ExitToAppIcon></ExitToAppIcon> Logout</Button>
  
       </Navbar.Text>
