@@ -13,23 +13,23 @@ export const NavigationItems = () => {
       <ul>
         <li>
           <Link to="/dashboard">
-            <TableChartIcon></TableChartIcon> Dashboard
+            <TableChartIcon className="nav-link"></TableChartIcon> Dashboard
           </Link>
         </li>
         <li>
           <Link to="/sport">
-            <SportsEsportsIcon></SportsEsportsIcon> Sport
+            <SportsEsportsIcon className="nav-link"></SportsEsportsIcon> Sport
           </Link>
         </li>
 
         <li>
           <Link to="/category">
-            <FormatIndentDecreaseIcon></FormatIndentDecreaseIcon>Categories
+            <FormatIndentDecreaseIcon className="nav-link"></FormatIndentDecreaseIcon>Categories
           </Link>
         </li>
         <li>
           <Link to="/tournament">
-            <SportsVolleyballIcon></SportsVolleyballIcon>Tournaments
+            <SportsVolleyballIcon className="nav-link"></SportsVolleyballIcon>Tournaments
           </Link>
         </li>
         {/* <li><Link to=""><QueueIcon></QueueIcon>Add Option</Link></li>

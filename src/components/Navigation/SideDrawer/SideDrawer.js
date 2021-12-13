@@ -31,23 +31,23 @@ export const SideDrawer = () => {
           <ul>
             <li onClick={handleClose}>
               <Link to="/dashboard">
-                <TableChartIcon></TableChartIcon> Dashboard
+                <TableChartIcon className="nav-link"></TableChartIcon> Dashboard
               </Link>
             </li>
             <li onClick={handleClose}>
               <Link to="/sport">
-                <SportsEsportsIcon></SportsEsportsIcon> Sports
+                <SportsEsportsIcon className="nav-link"></SportsEsportsIcon> Sports
               </Link>
             </li>
             <li onClick={handleClose}>
               <Link to="/category">
-                <FormatIndentDecreaseIcon></FormatIndentDecreaseIcon>
+                <FormatIndentDecreaseIcon className="nav-link"></FormatIndentDecreaseIcon>
                 Categories
               </Link>
             </li>
             <li onClick={handleClose}>
               <Link to="/tournament">
-                <SportsVolleyballIcon></SportsVolleyballIcon>Tournaments
+                <SportsVolleyballIcon className="nav-link"></SportsVolleyballIcon>Tournaments
               </Link>
             </li>
             {/* <li><Link to=""><QueueIcon></QueueIcon>Add Option</Link></li>

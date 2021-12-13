@@ -45,7 +45,7 @@ export const Login = (props) => {
     <div className="Login">
       <div className="form">
         <div className="thumbnail">
-          <AccountCircleIcon style={{ fontSize: 100, color: "white" }} />{" "}
+          <AccountCircleIcon className="login-icon" />{" "}
         </div>
         <Form onSubmit={handleLogin}>
           <Form.Group className="mb-3" controlId="formBasicEmail">

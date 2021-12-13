@@ -109,10 +109,11 @@ background-color: rgba(77, 77, 77, 0) !important;
 font-size:40px !important;;
 }
 /* icon size */
-.MuiSvgIcon-root {
+.nav-link{
 fill: currentColor;
 width: 20px !important;
 height: 20px!important;
+color: #fff;
 background-color: rgb(77, 77, 77);
 padding: 2px;
 margin: 4px;

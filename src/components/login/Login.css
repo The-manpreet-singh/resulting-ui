@@ -102,3 +102,10 @@
 .container .info span .fa {
   color: #ef3b3a;
 }
+.login-icon{
+  fill: currentColor;
+  width: 100px !important;
+  height: 100px!important;
+  color: #fff;
+
+}
