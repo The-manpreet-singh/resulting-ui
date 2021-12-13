@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Category = () => {
-    return (
-        <div>
-            <h1>Category sec</h1>
-        </div>
-    )
-}
+  return (
+    <div>
+      <h1>Category sec</h1>
+    </div>
+  );
+};
 
-export default Category
+export default Category;
