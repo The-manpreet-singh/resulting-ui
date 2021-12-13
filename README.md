@@ -33,3 +33,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
+### install devDependencies
+
+When you add the -D flag, or --save-dev, you are installing it as a development dependency, which adds it to the devDependencies list.
+example- npm install -D axios

@@ -12,7 +12,7 @@ const PrivateRoute = (props) => {
     <Route
       {...rest}
       render={(props) => {
-        return getToken() ? ( //  return getToken ?  this is for testing
+        return getToken() ? (
           <Component {...props} />
         ) : (
           <Redirect to={{ pathname: "/", state: { from: props.location } }} />
