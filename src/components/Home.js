@@ -15,6 +15,8 @@ import TableChartIcon from '@material-ui/icons/TableChart';
 import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
 import SportsVolleyballIcon from '@material-ui/icons/SportsVolleyball';
 import FormatIndentDecreaseIcon from '@material-ui/icons/FormatIndentDecrease';
+import SettingsIcon from '@material-ui/icons/Settings';
+import QueueIcon from '@material-ui/icons/Queue';
 import VideogameAssetIcon from '@material-ui/icons/VideogameAsset';
 import { useTheme } from '@material-ui/core'
 import { useMediaQuery } from '@material-ui/core';
@@ -27,10 +29,13 @@ export const Home = (props) => {
     return(
 <>
 <ul>
-  <li><Link className="active" to="/dashboard"><TableChartIcon></TableChartIcon> dashboard</Link></li>
+  <li><Link  to="/dashboard"><TableChartIcon></TableChartIcon> dashboard</Link></li>
   <li><Link to="/sport"><SportsEsportsIcon></SportsEsportsIcon> Sport</Link></li>
   <li><Link to="/tournament"><SportsVolleyballIcon></SportsVolleyballIcon>Tournament</Link></li>
   <li><Link to="/category"><FormatIndentDecreaseIcon></FormatIndentDecreaseIcon>Category</Link></li>
+  <li><Link to=""><QueueIcon></QueueIcon>Add Option</Link></li>
+  <li><Link to=""><SettingsIcon></SettingsIcon>Setting</Link></li>
+  <hr className="div_line" />
 </ul> 
 
 </>
@@ -45,11 +50,11 @@ export const Home = (props) => {
     return(
       <>
        
-      <DehazeIcon style={{fontSize:"40px"}} onClick={handleShow}></DehazeIcon>
+      <DehazeIcon className="toggle" onClick={handleShow}></DehazeIcon>
 
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Admin Dashboard</Offcanvas.Title>
+          <Offcanvas.Title className="admin-text">Admin Dashboard</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
         <ul>
@@ -57,6 +62,9 @@ export const Home = (props) => {
        <li  onClick={handleClose}><Link to="/sport"><SportsEsportsIcon></SportsEsportsIcon> Sport</Link></li>
         <li  onClick={handleClose}><Link to="/tournament"><SportsVolleyballIcon></SportsVolleyballIcon>Tournament</Link></li>
        <li  onClick={handleClose} ><Link to="/category"><FormatIndentDecreaseIcon></FormatIndentDecreaseIcon>Category</Link></li>
+       <li><Link to=""><QueueIcon></QueueIcon>Add Option</Link></li>
+       <li><Link to=""><SettingsIcon></SettingsIcon>Setting</Link></li>
+       <hr className="div_line" />
       </ul> 
         </Offcanvas.Body>
       </Offcanvas>
@@ -82,7 +90,7 @@ export const Home = (props) => {
     <div className="b-border">
     <Navbar className="Nav-res">
  
-    <Navbar.Brand > {chk==true?<Show/>:"Admin Dashboard"} </Navbar.Brand>
+    <Navbar.Brand  className="admin-text">  {chk==true?<Show/>:"Admin Dashboard"} </Navbar.Brand>
     <Navbar.Toggle />
     <Navbar.Collapse className="justify-content-end">
       <Navbar.Text>
@@ -98,9 +106,10 @@ export const Home = (props) => {
 <div >
   <div className="container-fluid">
   <Row>
-    <Col xs={12} md={2} xl={2}  >
-    {chk==true?"":<LeftNav/>}
-    </Col>
+  {chk==true? " ":<Col md={2} xl={2} className="slide-left" >
+    {chk==true? " ":<LeftNav/>}
+    </Col>}
+    
     <Col xs={12} xl={10} md={10} id="right-box" >
     <div >
           <Switch>
@@ -112,16 +121,17 @@ export const Home = (props) => {
           </Switch>
         </div>
 
+     
     </Col>
-
+    <div className="text-center f-box">
+ &copy; copy2021
+</div>
   </Row>
   </div>
 
  
 </div>
-<div className="text-center f-box">
- &copy; copy2021
-</div>
+
       </Router>
     
     </>
