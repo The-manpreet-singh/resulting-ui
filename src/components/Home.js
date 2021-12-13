@@ -105,7 +105,7 @@ export const Home = (props) => {
     <Navbar.Collapse className="justify-content-end">
       
       <Navbar.Text>
-      <img src={user.avatar} height={32}/> &nbsp; {user.fname} {user.lname}: &nbsp;
+      <img src={user.avatar} height={32}/> &nbsp; {user.fname}{user.lname} &nbsp;
       <Button onClick={handleLogout} className="btn-sm btn-dark">< ExitToAppIcon></ExitToAppIcon> Logout</Button>
  
       </Navbar.Text>
