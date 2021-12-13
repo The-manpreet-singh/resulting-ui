@@ -38,8 +38,8 @@ export const Home = (props) => {
   <li><Link to="/sport"><SportsEsportsIcon></SportsEsportsIcon> Sport</Link></li>
   <li><Link to="/tournament"><SportsVolleyballIcon></SportsVolleyballIcon>Tournament</Link></li>
   <li><Link to="/category"><FormatIndentDecreaseIcon></FormatIndentDecreaseIcon>Category</Link></li>
-  <li><Link to=""><QueueIcon></QueueIcon>Add Option</Link></li>
-  <li><Link to=""><SettingsIcon></SettingsIcon>Setting</Link></li>
+  {/* <li><Link to=""><QueueIcon></QueueIcon>Add Option</Link></li>
+  <li><Link to=""><SettingsIcon></SettingsIcon>Setting</Link></li> */}
   <hr className="div_line" />
   <li><Link to=""><img src={user.avatar} height={35}/> &nbsp;{user.fname} {user.lname}</Link></li>
   <hr className="div_line" />
