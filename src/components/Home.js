@@ -43,7 +43,7 @@ export const Home = (props) => {
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
             <img src={user.avatar} height={32} alt="user"/> &nbsp; {user.fname}{user.lname} &nbsp;
-              <Button onClick={handleLogout} className="btn-sm btn-dark">
+              <Button title="Logout" onClick={handleLogout} className="btn-sm btn-dark">
                 <ExitToAppIcon></ExitToAppIcon> Logout
               </Button>
             </Navbar.Text>
@@ -70,7 +70,7 @@ export const Home = (props) => {
           </Row>
         </div>
       </div>
-      <div className="text-center f-box">&copy; copy2021</div>
+      <div className="text-center f-box">&copy; copyright 2021</div>
     </Router>
   );
 };
