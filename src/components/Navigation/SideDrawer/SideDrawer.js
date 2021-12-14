@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import DehazeIcon from "@material-ui/icons/Dehaze";
 import { Offcanvas } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import FormatIndentDecreaseIcon from "@material-ui/icons/FormatIndentDecrease";

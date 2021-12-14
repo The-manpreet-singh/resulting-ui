@@ -28,7 +28,7 @@ li a {
 
 li a:hover:not(.active) {
   background-color: #555;
-  color: white;
+  color: white ;
 }
 
 .b-border{
@@ -44,6 +44,8 @@ li a:hover:not(.active) {
 background-color: rgb(238, 238, 238);
 padding: 12px;
 }
+
+
 @media screen and (max-width: 600px) {
   .container-fluid,.container{
     padding-right: 0 !important;
@@ -95,8 +97,9 @@ height: 100vh;
 .row{
 --bs-gutter-x: 0px !important;
 }
-#right-box{
+#right-wrapper{
 height: 100vh;
+background-color: #F0F1F6;
 }
 .admin-text{
 font-weight: 800;
@@ -125,4 +128,15 @@ border-radius: 3px;
 }
 .btn-close{
   background-color: #fff;
+}
+@media (min-width: 1200px){
+  #right-wrapper{
+    height: 100vh;
+    background-color: #F0F1F6;
+    width: 89% !important;
+    }
+    #left-Nav{
+      height: 100vh;
+      width: 11% !important;
+      }
 }

@@ -42,7 +42,7 @@ export const Home = (props) => {
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
-            <img src={user.avatar} height={32} alt="user"/> &nbsp; {user.fname}{user.lname} &nbsp;
+            <img src={user.avatar} height={32} alt="user"/> &nbsp; {user.fname} {user.lname} &nbsp;
               <Button title="Logout" onClick={handleLogout} className="btn-sm btn-dark">
                 <ExitToAppIcon></ExitToAppIcon> Logout
               </Button>
@@ -53,10 +53,10 @@ export const Home = (props) => {
       <div>
         <div className="container-fluid">
           <Row>
-            <Col xs={12} md={2} xl={2}>
+            <Col xs={12} md={2} xl={2} id="left-Nav">
               {chk === true ? "" : <NavigationItems />}
             </Col>
-            <Col xs={12} xl={10} md={10} id="right-box">
+            <Col xs={12} xl={10} md={10} id="right-wrapper">
               <div>
                 <Switch>
                   <Route exact path="/dashboard" component={Dashboard} />
