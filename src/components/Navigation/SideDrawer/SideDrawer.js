@@ -6,6 +6,7 @@ import FormatIndentDecreaseIcon from "@material-ui/icons/FormatIndentDecrease";
 import TableChartIcon from "@material-ui/icons/TableChart";
 import SportsEsportsIcon from "@material-ui/icons/SportsEsports";
 import SportsVolleyballIcon from "@material-ui/icons/SportsVolleyball";
+import BallotIcon from '@material-ui/icons/Ballot';
 // import AutorenewIcon from '@material-ui/icons/Autorenew';
 // import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 // import ExitToAppIcon from '@material-ui/icons/ExitToApp';
@@ -18,10 +19,10 @@ export const SideDrawer = () => {
   const handleShow = () => setShow(true);
   return (
     <div>
-      <DehazeIcon
+      <BallotIcon
         className="toggle"
         onClick={handleShow}
-      ></DehazeIcon>
+      ></BallotIcon>
 
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>

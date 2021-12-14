@@ -22,7 +22,7 @@ import { SideDrawer } from "./Navigation/SideDrawer/SideDrawer";
 
 export const Home = (props) => {
   const theme = useTheme();
-  const chk = useMediaQuery(theme.breakpoints.down("md"));
+  const chk = useMediaQuery(theme.breakpoints.down(768));
   // const user = JSON.parse(localStorage.getItem("user"));
   const user = getUser();
   //let history = useHistory();
