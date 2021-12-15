@@ -14,15 +14,11 @@ import { getUser, removeUserSession } from "../../../Utils/Common";
   console.log(history);
   const bgpath = (curr)=>{
     if(history.location.pathname===curr){
-      return "#CACFD2"
+      return "#555"
     }
 
   }
-  const handleLogout = () => {
-    removeUserSession();
-    // navigate("/");
-    window.open('/')
-  };
+ 
   return (
     <div>
       <ul>
@@ -47,11 +43,7 @@ import { getUser, removeUserSession } from "../../../Utils/Common";
             <SportsVolleyballIcon className="nav-link"></SportsVolleyballIcon>Tournaments
           </Link>
         </li>
-        <li>
-          <Link onClick={handleLogout}>
-          <ExitToAppIcon className="nav-link"></ExitToAppIcon>Logout
-          </Link>
-        </li>
+        
         {/* <li><Link to=""><QueueIcon></QueueIcon>Add Option</Link></li>
   <li><Link to=""><SettingsIcon></SettingsIcon>Setting</Link></li> */}
   {/* <hr className="div_line" />
