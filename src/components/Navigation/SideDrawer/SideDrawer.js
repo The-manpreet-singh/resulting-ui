@@ -6,12 +6,21 @@ import TableChartIcon from "@material-ui/icons/TableChart";
 import SportsEsportsIcon from "@material-ui/icons/SportsEsports";
 import SportsVolleyballIcon from "@material-ui/icons/SportsVolleyball";
 import BallotIcon from '@material-ui/icons/Ballot';
+import { getUser, removeUserSession } from "../../../Utils/Common";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+
+
 // import AutorenewIcon from '@material-ui/icons/Autorenew';
 // import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 // import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 
 export const SideDrawer = () => {
+  const handleLogout = () => {
+    removeUserSession();
+    // navigate("/");
+    window.open('/')
+  };
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -50,6 +59,11 @@ export const SideDrawer = () => {
                 <SportsVolleyballIcon className="nav-link"></SportsVolleyballIcon>Tournaments
               </Link>
             </li>
+            <li>
+          <Link onClick={handleLogout}>
+          <ExitToAppIcon className="nav-link"></ExitToAppIcon>Logout
+          </Link>
+        </li>
             {/* <li><Link to=""><QueueIcon></QueueIcon>Add Option</Link></li>
   <li><Link to=""><SettingsIcon></SettingsIcon>Setting</Link></li> */}
   {/* <hr className="div_line" />
