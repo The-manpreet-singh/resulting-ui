@@ -1,35 +1,55 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
+import { Link,withRouter } from "react-router-dom";
 import FormatIndentDecreaseIcon from "@material-ui/icons/FormatIndentDecrease";
-import TableChartIcon from "@material-ui/icons/TableChart";
+import DashboardIcon from '@material-ui/icons/Dashboard';
 import SportsEsportsIcon from "@material-ui/icons/SportsEsports";
 import SportsVolleyballIcon from "@material-ui/icons/SportsVolleyball";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import { getUser, removeUserSession } from "../../../Utils/Common";
 
+ 
+ const NavigationItems = ({history}) => {
+  
+  console.log(history);
+  const bgpath = (curr)=>{
+    if(history.location.pathname===curr){
+      return "#CACFD2"
+    }
 
-export const NavigationItems = () => {
+  }
+  const handleLogout = () => {
+    removeUserSession();
+    // navigate("/");
+    window.open('/')
+  };
   return (
     <div>
       <ul>
         <li>
-          <Link to="/dashboard">
-            <TableChartIcon className="nav-link"></TableChartIcon> Dashboard
+          <Link to="/dashboard" style={{backgroundColor:bgpath("/dashboard")}}>
+            <DashboardIcon className="nav-link"></DashboardIcon> Dashboard
           </Link>
         </li>
         <li>
-          <Link to="/sport">
+          <Link to="/sport"  style={{backgroundColor:bgpath("/sport")}} >
             <SportsEsportsIcon className="nav-link"></SportsEsportsIcon> Sport
           </Link>
         </li>
 
         <li>
-          <Link to="/category">
+          <Link to="/category"  style={{backgroundColor:bgpath("/category")}}>
             <FormatIndentDecreaseIcon className="nav-link"></FormatIndentDecreaseIcon>Categories
           </Link>
         </li>
         <li>
-          <Link to="/tournament">
+          <Link to="/tournament"  style={{backgroundColor:bgpath("/tournament")}}>
             <SportsVolleyballIcon className="nav-link"></SportsVolleyballIcon>Tournaments
+          </Link>
+        </li>
+        <li>
+          <Link onClick={handleLogout}>
+          <ExitToAppIcon className="nav-link"></ExitToAppIcon>Logout
           </Link>
         </li>
         {/* <li><Link to=""><QueueIcon></QueueIcon>Add Option</Link></li>
@@ -44,3 +64,4 @@ export const NavigationItems = () => {
     </div>
   );
 };
+export default withRouter(NavigationItems) 

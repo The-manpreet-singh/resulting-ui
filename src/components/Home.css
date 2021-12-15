@@ -23,8 +23,13 @@ li a {
   text-decoration: none;
   font-size: 12px;
 }
+.is-active{
+  color:tomato;
+}
 
-
+ul li.active a{
+  color:blue;
+  }
 
 li a:hover:not(.active) {
   background-color: #555;
@@ -75,7 +80,7 @@ padding: 12px;
   margin-right: 0px!important;
   padding: 0 !important;
 }
-.col-md-2{
+.col-md-3{
   background-color: #181824;
   padding: 0;
 
@@ -113,7 +118,7 @@ color: aliceblue;
 }
 .toggle{
 background-color: rgba(77, 77, 77, 0) !important;
-font-size:30px !important;;
+font-size:40px !important;;
 }
 /* icon size */
 .nav-link{
@@ -121,7 +126,6 @@ fill: currentColor;
 width: 20px !important;
 height: 20px!important;
 color: #fff;
-background-color: rgb(77, 77, 77);
 padding: 2px;
 margin: 4px;
 border-radius: 3px;
@@ -133,10 +137,10 @@ border-radius: 3px;
   #right-wrapper{
     height: 100vh;
     background-color: #F0F1F6;
-    width: 89% !important;
+    width: 88% !important;
     }
     #left-Nav{
       height: 100vh;
-      width: 11% !important;
+      width: 12% !important;
       }
 }

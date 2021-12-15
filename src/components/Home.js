@@ -17,7 +17,7 @@ import Category from "./Category/Category";
 import { useTheme } from "@material-ui/core";
 import { useMediaQuery } from "@material-ui/core";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-import { NavigationItems } from "./Navigation/NavigationItems/NavigationItems";
+import  NavigationItems  from "./Navigation/NavigationItems/NavigationItems";
 import { SideDrawer } from "./Navigation/SideDrawer/SideDrawer";
 
 export const Home = (props) => {
@@ -53,10 +53,10 @@ export const Home = (props) => {
       <div>
         <div className="container-fluid">
           <Row>
-            <Col xs={12} md={2} xl={2} id="left-Nav">
+            <Col xs={12} md={3} xl={2} id="left-Nav">
               {chk === true ? "" : <NavigationItems />}
             </Col>
-            <Col xs={12} xl={10} md={10} id="right-wrapper">
+            <Col xs={12} xl={10} md={9} id="right-wrapper">
               <div>
                 <Switch>
                   <Route exact path="/dashboard" component={Dashboard} />
