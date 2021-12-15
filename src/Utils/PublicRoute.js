@@ -4,6 +4,8 @@ import { getToken } from "./Common";
 import { Redirect, Route } from "react-router-dom";
 
 const PublicRoute = ({ component: Component, ...rest }) => {
+  // const PublicRoute = ({ getToken, ownProps }) => {
+  //   const { component: Component, ...rest } = ownProps; //this is for testing
   return (
     <Route
       {...rest}
