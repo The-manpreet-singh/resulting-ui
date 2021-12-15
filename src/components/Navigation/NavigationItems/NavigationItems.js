@@ -5,13 +5,11 @@ import FormatIndentDecreaseIcon from "@material-ui/icons/FormatIndentDecrease";
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import SportsEsportsIcon from "@material-ui/icons/SportsEsports";
 import SportsVolleyballIcon from "@material-ui/icons/SportsVolleyball";
-import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-import { getUser, removeUserSession } from "../../../Utils/Common";
 
  
  const NavigationItems = ({history}) => {
   
-  console.log(history);
+  
   const bgpath = (curr)=>{
     if(history.location.pathname===curr){
       return "#555"

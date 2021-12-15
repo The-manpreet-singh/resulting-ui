@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Offcanvas } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link ,withRouter} from "react-router-dom";
 import FormatIndentDecreaseIcon from "@material-ui/icons/FormatIndentDecrease";
 import TableChartIcon from "@material-ui/icons/TableChart";
 import SportsEsportsIcon from "@material-ui/icons/SportsEsports";
@@ -15,7 +15,13 @@ import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 // import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 
-export const SideDrawer = () => {
+ const SideDrawer = ({history}) => {
+  const bgpath = (curr)=>{
+    if(history.location.pathname===curr){
+      return "#555"
+    }
+
+  }
   const handleLogout = () => {
     removeUserSession();
     // navigate("/");
@@ -38,23 +44,23 @@ export const SideDrawer = () => {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <ul>
-            <li onClick={handleClose}>
+            <li onClick={handleClose} style={{backgroundColor:bgpath("/dashboard")}}>
               <Link to="/dashboard">
                 <TableChartIcon className="nav-link"></TableChartIcon> Dashboard
               </Link>
             </li>
-            <li onClick={handleClose}>
+            <li onClick={handleClose} style={{backgroundColor:bgpath("/sport")}}>
               <Link to="/sport">
                 <SportsEsportsIcon className="nav-link"></SportsEsportsIcon> Sports
               </Link>
             </li>
-            <li onClick={handleClose}>
+            <li onClick={handleClose} style={{backgroundColor:bgpath("/category")}}>
               <Link to="/category">
                 <FormatIndentDecreaseIcon className="nav-link"></FormatIndentDecreaseIcon>
                 Categories
               </Link>
             </li>
-            <li onClick={handleClose}>
+            <li onClick={handleClose} style={{backgroundColor:bgpath("/tournament")}}>
               <Link to="/tournament">
                 <SportsVolleyballIcon className="nav-link"></SportsVolleyballIcon>Tournaments
               </Link>
@@ -78,3 +84,5 @@ export const SideDrawer = () => {
     </div>
   );
 };
+
+export default withRouter(SideDrawer)
