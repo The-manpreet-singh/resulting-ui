@@ -18,7 +18,7 @@ import { useTheme } from "@material-ui/core";
 import { useMediaQuery } from "@material-ui/core";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import  NavigationItems  from "./Navigation/NavigationItems/NavigationItems";
-import { SideDrawer } from "./Navigation/SideDrawer/SideDrawer";
+import  SideDrawer  from "./Navigation/SideDrawer/SideDrawer";
 
 export const Home = (props) => {
   const theme = useTheme();

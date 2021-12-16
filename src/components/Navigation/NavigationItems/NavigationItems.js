@@ -5,16 +5,26 @@ import FormatIndentDecreaseIcon from "@material-ui/icons/FormatIndentDecrease";
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import SportsEsportsIcon from "@material-ui/icons/SportsEsports";
 import SportsVolleyballIcon from "@material-ui/icons/SportsVolleyball";
-import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-import { getUser, removeUserSession } from "../../../Utils/Common";
 
  
  const NavigationItems = ({history}) => {
   
-  console.log(history);
+  
   const bgpath = (curr)=>{
     if(history.location.pathname===curr){
       return "#555"
+    }
+
+  }
+  const borderpath = (curr)=>{
+    if(history.location.pathname===curr){
+      return "5px solid #46CBFF"
+    }
+
+  }
+  const colorpath = (curr)=>{
+    if(history.location.pathname===curr){
+      return "#ffffff"
     }
 
   }
@@ -23,23 +33,23 @@ import { getUser, removeUserSession } from "../../../Utils/Common";
     <div>
       <ul>
         <li>
-          <Link to="/dashboard" style={{backgroundColor:bgpath("/dashboard")}}>
+          <Link to="/dashboard" style={{backgroundColor:bgpath("/dashboard"),borderLeft:borderpath("/dashboard"),color:colorpath("/dashboard")}}>
             <DashboardIcon className="nav-link"></DashboardIcon> Dashboard
           </Link>
         </li>
         <li>
-          <Link to="/sport"  style={{backgroundColor:bgpath("/sport")}} >
+          <Link to="/sport"  style={{backgroundColor:bgpath("/sport"),borderLeft:borderpath("/sport"),color:colorpath("/sport")}} >
             <SportsEsportsIcon className="nav-link"></SportsEsportsIcon> Sport
           </Link>
         </li>
 
         <li>
-          <Link to="/category"  style={{backgroundColor:bgpath("/category")}}>
+          <Link to="/category"  style={{backgroundColor:bgpath("/category"),borderLeft:borderpath("/category"),color:colorpath("/category")}}>
             <FormatIndentDecreaseIcon className="nav-link"></FormatIndentDecreaseIcon>Categories
           </Link>
         </li>
         <li>
-          <Link to="/tournament"  style={{backgroundColor:bgpath("/tournament")}}>
+          <Link to="/tournament"  style={{backgroundColor:bgpath("/tournament"),borderLeft:borderpath("/tournament"),color:colorpath("/tournament")}}>
             <SportsVolleyballIcon className="nav-link"></SportsVolleyballIcon>Tournaments
           </Link>
         </li>
