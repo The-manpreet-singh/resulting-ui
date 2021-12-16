@@ -136,6 +136,15 @@ padding: 2px;
 margin: 4px;
 border-radius: 3px;
 }
+.btn-logout{
+  fill: currentColor;
+  width: 20px !important;
+  height: 20px!important;
+  color:red;
+  padding: 2px;
+margin: 4px;
+
+}
 .btn-close{
   background-color: #fff;
 }
