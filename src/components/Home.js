@@ -44,7 +44,7 @@ export const Home = (props) => {
             <Navbar.Text>
             <img src={user.avatar} height={32} alt="user"/> &nbsp; {user.fname} {user.lname} &nbsp;
               <Button title="Logout" onClick={handleLogout} className="btn-sm btn-dark">
-                <ExitToAppIcon></ExitToAppIcon> Logout
+                {chk === true ? <ExitToAppIcon></ExitToAppIcon> :"Logout"}
               </Button>
             </Navbar.Text>
           </Navbar.Collapse>
@@ -58,7 +58,9 @@ export const Home = (props) => {
             </Col>
             <Col xs={12} xl={10} md={9} id="right-wrapper">
               <div>
+            
                 <Switch>
+                
                   <Route exact path="/dashboard" component={Dashboard} />
                   <Route exact path="/sport" component={Sport} />
                   <Route exact path="/tournament" component={Tournament} />
@@ -66,6 +68,7 @@ export const Home = (props) => {
                   <Redirect to="/" />
                 </Switch>
               </div>
+              
             </Col>
           </Row>
         </div>
