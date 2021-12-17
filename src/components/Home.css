@@ -160,3 +160,6 @@ margin: 4px;
       width: 12% !important;
       }
 }
+.offcanvas-body{
+  padding: 0px !important;
+}
