@@ -75,7 +75,7 @@ import { removeUserSession } from "../../../Utils/Common";
           </Link>
         </li>
         <li>
-          <Link onClick={handleLogout}>
+          <Link to="/" onClick={handleLogout} >
           <ExitToAppIcon className="btn-logout"/>Logout
           </Link>
         </li>

@@ -65,7 +65,7 @@ export const Home = (props) => {
                   <Route exact path="/sport" component={Sport} />
                   <Route exact path="/tournament" component={Tournament} />
                   <Route exact path="/category" component={Category} />
-                  <Redirect to="/" />
+                  <Redirect to="/dashboard" />
                 </Switch>
               </div>
               
