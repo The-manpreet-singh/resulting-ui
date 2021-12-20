@@ -137,6 +137,15 @@ padding: 2px;
 margin: 4px;
 border-radius: 3px;
 }
+.nav-link:hover{
+  fill: currentColor;
+  width: 20px !important;
+  height: 20px!important;
+  color: #fff;
+  padding: 2px;
+  margin: 4px;
+  border-radius: 3px;
+  }
 .btn-logout{
   fill: currentColor;
   width: 20px !important;

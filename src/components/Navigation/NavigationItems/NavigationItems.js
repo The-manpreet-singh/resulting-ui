@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link,withRouter } from "react-router-dom";
 import FormatIndentDecreaseIcon from "@material-ui/icons/FormatIndentDecrease";
-import DashboardIcon from '@material-ui/icons/Dashboard';
+import AllInboxIcon from '@material-ui/icons/AllInbox';
 import SportsEsportsIcon from "@material-ui/icons/SportsEsports";
 import SportsVolleyballIcon from "@material-ui/icons/SportsVolleyball";
 
@@ -34,7 +34,7 @@ import SportsVolleyballIcon from "@material-ui/icons/SportsVolleyball";
       <ul>
         <li>
           <Link to="/dashboard" style={{backgroundColor:bgpath("/dashboard"),borderLeft:borderpath("/dashboard"),color:colorpath("/dashboard")}}>
-            <DashboardIcon className="nav-link"></DashboardIcon> Dashboard
+            <AllInboxIcon className="nav-link"></AllInboxIcon> Dashboard
           </Link>
         </li>
         <li>
