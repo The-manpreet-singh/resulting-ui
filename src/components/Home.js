@@ -42,7 +42,7 @@ export const Home = (props) => {
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
-            <img src={user.avatar} height={32} alt="user"/> &nbsp; {user.fname} {user.lname} &nbsp;
+            <img className="avatar" src={user.avatar} height={32} alt="user"/> &nbsp; {user.fname} {user.lname} &nbsp;
               <Button title="Logout" onClick={handleLogout} className="btn-sm btn-dark">
                 {chk === true ? <ExitToAppIcon></ExitToAppIcon> :"Logout"}
               </Button>
