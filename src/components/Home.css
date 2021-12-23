@@ -27,11 +27,7 @@ li a {
 .is-active{
   color:tomato;
 }
-.input-group-text{
-  height: 52px;
-  outline: 0px;
-  border: none
-}
+
 ul li.active a{
   color:blue;
   }
