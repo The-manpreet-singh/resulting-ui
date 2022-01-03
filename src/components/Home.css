@@ -27,11 +27,7 @@ li a {
 .is-active{
   color:tomato;
 }
-.input-group-text{
-  height: 52px;
-  outline: 0px;
-  border: none
-}
+
 ul li.active a{
   color:blue;
   }
@@ -111,6 +107,7 @@ height: 100vh;
 #right-wrapper{
 height: 100vh;
 background-color: #F0F1F6;
+padding: 10px;
 }
 .admin-text{
 font-weight: 800;
@@ -136,6 +133,15 @@ padding: 2px;
 margin: 4px;
 border-radius: 3px;
 }
+.nav-link:hover{
+  fill: currentColor;
+  width: 20px !important;
+  height: 20px!important;
+  color: #fff;
+  padding: 2px;
+  margin: 4px;
+  border-radius: 3px;
+  }
 .btn-logout{
   fill: currentColor;
   width: 20px !important;
@@ -158,4 +164,12 @@ margin: 4px;
       height: 100vh;
       width: 12% !important;
       }
+}
+.offcanvas-body{
+  padding: 0px !important;
+}
+.avatar{
+  border: 2px solid #444;
+  border-radius: 50%;
+  padding: 2px;
 }

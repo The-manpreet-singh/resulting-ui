@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button,InputGroup } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import "./Login.css";
 import axios from "axios";
 import { setUserSession } from "../../Utils/Common";
 import { registerUser } from "./api/api";
+import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
+import VpnKeyIcon from '@material-ui/icons/VpnKey';
+
 
 export const Login = (props) => {
   const [username, setUsername] = useState("");
@@ -49,8 +52,10 @@ export const Login = (props) => {
         </div>
         <Form onSubmit={handleLogin}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control
+            {/* <Form.Label>Email address</Form.Label> */}
+            <InputGroup>
+        <InputGroup.Text><AlternateEmailIcon/></InputGroup.Text>
+        <Form.Control
               data-test="component-email"
               class-name="email"
               type="email"
@@ -58,15 +63,21 @@ export const Login = (props) => {
               placeholder="Enter email"
               onChange={(e) => setUsername(e.target.value)}
             />
+      </InputGroup>
+            
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control
+            {/* <Form.Label>Password</Form.Label> */}
+            <InputGroup>
+        <InputGroup.Text><VpnKeyIcon/></InputGroup.Text>
+        <Form.Control
               type="password"
               value={password}
               placeholder="Password"
               onChange={(e) => setPassword(e.target.value)}
             />
+      </InputGroup>
+           
           </Form.Group>
           {error && <Form.Text className="text-message">{error}</Form.Text>}{" "}
           <br />
